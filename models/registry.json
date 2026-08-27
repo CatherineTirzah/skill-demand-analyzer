@@ -1,0 +1,26 @@
+[
+  {
+    "model_id": "20260826T122616Z",
+    "avg_mae": 32.52683141043661,
+    "n_skills": 11,
+    "timestamp": "2026-08-26T12:26:16.121294+00:00",
+    "mlflow_run_id": "58f7640b854d493eac43d4cb44444c53",
+    "status": "retired"
+  },
+  {
+    "model_id": "20260826T130453Z",
+    "avg_mae": 32.52683141043661,
+    "n_skills": 11,
+    "timestamp": "2026-08-26T13:04:53.132310+00:00",
+    "mlflow_run_id": "2594e4ccf6804e438849d051a164be68",
+    "status": "retired"
+  },
+  {
+    "model_id": "20260826T131231Z",
+    "avg_mae": 32.52683141043661,
+    "n_skills": 11,
+    "timestamp": "2026-08-26T13:12:31.861229+00:00",
+    "mlflow_run_id": "5a43c9eda0974292b832504a02c5ee6c",
+    "status": "production"
+  }
+]

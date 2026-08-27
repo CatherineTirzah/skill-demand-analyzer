@@ -1,0 +1,97 @@
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  versions_dir: data/versions
+  models_dir: models
+  monitoring_dir: monitoring
+
+sources:
+  data_science_us:
+    file: data_science_job_posts_2025.csv
+    enabled: true
+    title_column: job_title
+    company_column: company
+    location_column: location
+    # skills already extracted by the dataset author — stored as a Python-list-repr string
+    skills_column: skills
+    skills_format: python_list
+    description_column: null          # no free-text description in this source
+    date_mode: relative
+    relative_date_column: post_date          # e.g. "17 days ago", "a month ago"
+    reference_date: "2025-07-01"              # approximate — dataset has no scrape timestamp
+
+  indian_tech:
+    file: indian_tech_jobs_2026.csv
+    enabled: true
+    title_column: job_title
+    company_column: company_name
+    location_column: location
+    skills_column: skills_required            # comma-separated string, "Not Available" = missing
+    skills_format: comma
+    description_column: job_description        # also has real free text -> used as NLP cross-check
+    date_mode: computed_from_scrape
+    scrape_date_column: scraped_at
+    days_since_column: days_since_posted
+
+  linkedin:
+    file: linkedin_job_postings.csv
+    enabled: false                              # enable once job_skills.csv is added (see join below)
+    title_column: job_title
+    company_column: company
+    location_column: job_location
+    skills_column: null                        # no skills in the main file
+    description_column: null
+    date_mode: absolute
+    date_column: first_seen
+    sample_size: 50000                          # file has 1.3M+ rows — subsample for tractability
+    role_filter: true                           # general jobs dump (nurses, managers, etc.) — filter to tech/DS roles
+    join:                                        # merges in skills from the companion Kaggle file
+      file: job_skills.csv
+      left_key: job_link
+      right_key: job_link
+      skills_column: skills_desc
+      skills_format: comma
+
+role_filter_keywords:
+  - data scientist
+  - machine learning
+  - ml engineer
+  - data analyst
+  - data engineer
+  - ai engineer
+  - artificial intelligence
+  - nlp
+  - deep learning
+  - business intelligence
+  - analytics
+  - software engineer
+  - software developer
+  - backend developer
+  - full stack
+  - devops
+  - mlops
+  - cloud engineer
+  - data science
+
+skill_extraction:
+  spacy_model: en_core_web_sm
+  min_skill_confidence: 0.6
+
+trend_model:
+  window: monthly          # weekly | monthly
+  top_n_skills: 30
+  test_size: 0.2
+  random_state: 42
+
+monitoring:
+  drift_metric: psi        # population stability index
+  drift_threshold: 0.2      # PSI > 0.2 => significant drift, trigger retrain
+  latency_threshold_ms: 500
+
+mlflow:
+  tracking_uri: sqlite:///mlflow.db   # local sqlite backend (file-store backend is deprecated in mlflow>=2.x)
+  experiment_name: skill-demand-analyzer
+
+api:
+  host: 0.0.0.0
+  port: 8000

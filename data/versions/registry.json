@@ -1,0 +1,612 @@
+[
+  {
+    "hash": "4922336515727d6d",
+    "stage": "raw",
+    "source": "data_science_us",
+    "rows": 944,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__data_science_us__4922336515727d6d.csv",
+    "timestamp": "2026-08-26T12:01:32.002402+00:00",
+    "notes": "ingested this run",
+    "is_new_content": true
+  },
+  {
+    "hash": "4922336515727d6d",
+    "stage": "raw",
+    "source": "data_science_us",
+    "rows": 944,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__data_science_us__4922336515727d6d.csv",
+    "timestamp": "2026-08-26T12:14:13.008217+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "4922336515727d6d",
+    "stage": "raw",
+    "source": "data_science_us",
+    "rows": 944,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__data_science_us__4922336515727d6d.csv",
+    "timestamp": "2026-08-26T12:19:37.006258+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "671ee2314b20863e",
+    "stage": "raw",
+    "source": "indian_tech",
+    "rows": 23201,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__indian_tech__671ee2314b20863e.csv",
+    "timestamp": "2026-08-26T12:19:37.467943+00:00",
+    "notes": "ingested this run",
+    "is_new_content": true
+  },
+  {
+    "hash": "c356955f20a72616",
+    "stage": "raw",
+    "source": "unified",
+    "rows": 24145,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__unified__c356955f20a72616.csv",
+    "timestamp": "2026-08-26T12:19:37.651624+00:00",
+    "notes": "concat of all enabled sources",
+    "is_new_content": true
+  },
+  {
+    "hash": "88c5892b44c9443b",
+    "stage": "processed",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "processed__unified__88c5892b44c9443b.csv",
+    "timestamp": "2026-08-26T12:20:21.087404+00:00",
+    "notes": "cleaned + deduped",
+    "is_new_content": true
+  },
+  {
+    "hash": "88c5892b44c9443b",
+    "stage": "processed",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "processed__unified__88c5892b44c9443b.csv",
+    "timestamp": "2026-08-26T12:20:56.955934+00:00",
+    "notes": "cleaned + deduped",
+    "is_new_content": false
+  },
+  {
+    "hash": "a90761cdf89ed607",
+    "stage": "skills_extracted",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date",
+      "extraction_method",
+      "skill_count",
+      "skills_json"
+    ],
+    "file": "skills_extracted__unified__a90761cdf89ed607.csv",
+    "timestamp": "2026-08-26T12:22:22.944106+00:00",
+    "notes": "skills extracted (pre-extracted > NLP description > NLP title)",
+    "is_new_content": true
+  },
+  {
+    "hash": "4922336515727d6d",
+    "stage": "raw",
+    "source": "data_science_us",
+    "rows": 944,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__data_science_us__4922336515727d6d.csv",
+    "timestamp": "2026-08-26T12:26:14.015101+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "671ee2314b20863e",
+    "stage": "raw",
+    "source": "indian_tech",
+    "rows": 23201,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__indian_tech__671ee2314b20863e.csv",
+    "timestamp": "2026-08-26T12:26:14.417329+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "c356955f20a72616",
+    "stage": "raw",
+    "source": "unified",
+    "rows": 24145,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__unified__c356955f20a72616.csv",
+    "timestamp": "2026-08-26T12:26:14.502518+00:00",
+    "notes": "concat of all enabled sources",
+    "is_new_content": false
+  },
+  {
+    "hash": "88c5892b44c9443b",
+    "stage": "processed",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "processed__unified__88c5892b44c9443b.csv",
+    "timestamp": "2026-08-26T12:26:14.878717+00:00",
+    "notes": "cleaned + deduped",
+    "is_new_content": false
+  },
+  {
+    "hash": "a90761cdf89ed607",
+    "stage": "skills_extracted",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date",
+      "extraction_method",
+      "skill_count",
+      "skills_json"
+    ],
+    "file": "skills_extracted__unified__a90761cdf89ed607.csv",
+    "timestamp": "2026-08-26T12:26:15.564143+00:00",
+    "notes": "skills extracted (pre-extracted > NLP description > NLP title)",
+    "is_new_content": false
+  },
+  {
+    "hash": "2e16c8247f28ea98",
+    "stage": "skills_extracted",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date",
+      "extraction_method",
+      "skill_count",
+      "skills_json"
+    ],
+    "file": "skills_extracted__unified__2e16c8247f28ea98.csv",
+    "timestamp": "2026-08-26T13:03:36.932005+00:00",
+    "notes": "CONTROLLED DRIFT TEST - increased skill_count distribution",
+    "is_new_content": true
+  },
+  {
+    "hash": "4922336515727d6d",
+    "stage": "raw",
+    "source": "data_science_us",
+    "rows": 944,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__data_science_us__4922336515727d6d.csv",
+    "timestamp": "2026-08-26T13:04:50.359135+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "671ee2314b20863e",
+    "stage": "raw",
+    "source": "indian_tech",
+    "rows": 23201,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__indian_tech__671ee2314b20863e.csv",
+    "timestamp": "2026-08-26T13:04:50.779767+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "c356955f20a72616",
+    "stage": "raw",
+    "source": "unified",
+    "rows": 24145,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__unified__c356955f20a72616.csv",
+    "timestamp": "2026-08-26T13:04:50.890641+00:00",
+    "notes": "concat of all enabled sources",
+    "is_new_content": false
+  },
+  {
+    "hash": "88c5892b44c9443b",
+    "stage": "processed",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "processed__unified__88c5892b44c9443b.csv",
+    "timestamp": "2026-08-26T13:04:51.509123+00:00",
+    "notes": "cleaned + deduped",
+    "is_new_content": false
+  },
+  {
+    "hash": "a90761cdf89ed607",
+    "stage": "skills_extracted",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date",
+      "extraction_method",
+      "skill_count",
+      "skills_json"
+    ],
+    "file": "skills_extracted__unified__a90761cdf89ed607.csv",
+    "timestamp": "2026-08-26T13:04:52.395264+00:00",
+    "notes": "skills extracted (pre-extracted > NLP description > NLP title)",
+    "is_new_content": false
+  },
+  {
+    "hash": "4922336515727d6d",
+    "stage": "raw",
+    "source": "data_science_us",
+    "rows": 944,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__data_science_us__4922336515727d6d.csv",
+    "timestamp": "2026-08-26T13:07:30.883920+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "671ee2314b20863e",
+    "stage": "raw",
+    "source": "indian_tech",
+    "rows": 23201,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__indian_tech__671ee2314b20863e.csv",
+    "timestamp": "2026-08-26T13:07:31.273562+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "c356955f20a72616",
+    "stage": "raw",
+    "source": "unified",
+    "rows": 24145,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__unified__c356955f20a72616.csv",
+    "timestamp": "2026-08-26T13:07:31.376690+00:00",
+    "notes": "concat of all enabled sources",
+    "is_new_content": false
+  },
+  {
+    "hash": "88c5892b44c9443b",
+    "stage": "processed",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "processed__unified__88c5892b44c9443b.csv",
+    "timestamp": "2026-08-26T13:07:31.894238+00:00",
+    "notes": "cleaned + deduped",
+    "is_new_content": false
+  },
+  {
+    "hash": "a90761cdf89ed607",
+    "stage": "skills_extracted",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date",
+      "extraction_method",
+      "skill_count",
+      "skills_json"
+    ],
+    "file": "skills_extracted__unified__a90761cdf89ed607.csv",
+    "timestamp": "2026-08-26T13:07:33.044680+00:00",
+    "notes": "skills extracted (pre-extracted > NLP description > NLP title)",
+    "is_new_content": false
+  },
+  {
+    "hash": "4922336515727d6d",
+    "stage": "raw",
+    "source": "data_science_us",
+    "rows": 944,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__data_science_us__4922336515727d6d.csv",
+    "timestamp": "2026-08-26T13:12:26.444755+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "671ee2314b20863e",
+    "stage": "raw",
+    "source": "indian_tech",
+    "rows": 23201,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__indian_tech__671ee2314b20863e.csv",
+    "timestamp": "2026-08-26T13:12:26.819694+00:00",
+    "notes": "ingested this run",
+    "is_new_content": false
+  },
+  {
+    "hash": "c356955f20a72616",
+    "stage": "raw",
+    "source": "unified",
+    "rows": 24145,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "raw__unified__c356955f20a72616.csv",
+    "timestamp": "2026-08-26T13:12:26.926378+00:00",
+    "notes": "concat of all enabled sources",
+    "is_new_content": false
+  },
+  {
+    "hash": "88c5892b44c9443b",
+    "stage": "processed",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "processed__unified__88c5892b44c9443b.csv",
+    "timestamp": "2026-08-26T13:12:27.450728+00:00",
+    "notes": "cleaned + deduped",
+    "is_new_content": false
+  },
+  {
+    "hash": "a90761cdf89ed607",
+    "stage": "skills_extracted",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date",
+      "extraction_method",
+      "skill_count",
+      "skills_json"
+    ],
+    "file": "skills_extracted__unified__a90761cdf89ed607.csv",
+    "timestamp": "2026-08-26T13:12:28.565807+00:00",
+    "notes": "skills extracted (pre-extracted > NLP description > NLP title)",
+    "is_new_content": false
+  },
+  {
+    "hash": "88c5892b44c9443b",
+    "stage": "processed",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date"
+    ],
+    "file": "processed__unified__88c5892b44c9443b.csv",
+    "timestamp": "2026-08-26T13:12:30.203407+00:00",
+    "notes": "cleaned + deduped",
+    "is_new_content": false
+  },
+  {
+    "hash": "a90761cdf89ed607",
+    "stage": "skills_extracted",
+    "source": "unified",
+    "rows": 23517,
+    "columns": [
+      "source",
+      "job_title",
+      "job_description",
+      "skills_raw",
+      "company",
+      "location",
+      "posted_date",
+      "extraction_method",
+      "skill_count",
+      "skills_json"
+    ],
+    "file": "skills_extracted__unified__a90761cdf89ed607.csv",
+    "timestamp": "2026-08-26T13:12:31.185591+00:00",
+    "notes": "skills extracted (pre-extracted > NLP description > NLP title)",
+    "is_new_content": false
+  }
+]

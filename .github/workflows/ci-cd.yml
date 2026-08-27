@@ -1,0 +1,58 @@
+name: CI/CD - Skill Demand Analyzer
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ---- CI: runs on every push/PR ----
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          python -m spacy download en_core_web_sm
+
+      - name: Run tests
+        run: pytest tests/ -v
+        # Note: no full-pipeline smoke test here anymore — ingestion now requires
+        # the real datasets in data/raw/, which aren't committed to the repo.
+        # Unit tests (skill extraction, taxonomy, skill-gap logic) don't need data.
+
+  # ---- CD: builds & pushes image, only on main ----
+  build-and-push:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t skill-demand-analyzer:${{ github.sha }} .
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push image
+        run: |
+          docker tag skill-demand-analyzer:${{ github.sha }} ghcr.io/${{ github.repository }}:latest
+          docker push ghcr.io/${{ github.repository }}:latest
+
+      # Deploy step is intentionally left as a placeholder — wire this to
+      # your actual host (Render/Railway/EC2/etc.) once you have one.
+      - name: Deploy (placeholder)
+        run: echo "Add your deployment step here (e.g. ssh + docker-compose pull && up -d)"
