@@ -102,7 +102,4 @@ docker-compose up --build
 | 2 — CI/CD Automation | `.github/workflows/ci-cd.yml` runs tests on every push, builds Docker image, and can auto-deploy on merge |
 | 3 — Full MLOps | `src/monitoring.py` detects drift and can trigger `src/train.py` automatically (see `--auto-retrain` flag); MLflow model registry compares new vs current model and blocks promotion if it underperforms |
 
-## 5. Team roles (from Task 6)
 
-- **Data & ML Lead** — `src/data_ingestion.py`, `preprocessing.py`, `skill_extraction.py`, `trend_model.py`
-- **MLOps & Product Lead** — `pipelines/`, `api/`, `dashboard/`, `monitoring.py`, `.github/workflows/`
